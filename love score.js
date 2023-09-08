@@ -7,18 +7,18 @@ function button() {
 
     let result = name1 + " and " + name2 + "'s Love Score is: " + love_score + "%";
 
-    // if (love_score > 80) {
-    //     alert ("Your love score is " + love_score + "%." + " You are a good match!");
-    // }
-    // else if (love_score > 40 && love_score <= 80) {
-    //     alert ("Your love score is " + love_score + "%." + " You are both sweet but this is not the right time ");
-    // }
-    // else if (love_score <=30) {
-    //     alert("Your love score is " + love_score + "%" + "You both have other proirities")
-    // }
-    // else {
-    //     alert("Your love score is " + love_score + "% " + " I think you are good to be friends not lovers.") ;
-    // }
+    if (result > 80) {
+        alert ("Your love score is " + result + "%." + " You are a good match!");
+    }
+    else if (result > 40 && result <= 80) {
+        alert ("Your love score is " + result + "%." + " You are both sweet but this is not the right time ");
+    }
+    else if (result <=30) {
+        alert("Your love score is " + result + "%" + "You both have other proirities")
+    }
+    else {
+        alert("Your love score is " + result + "% " + " I think you are good to be friends not lovers.") ;
+    }
 
     // Show the pop-up message
     let popup = document.getElementById("popup");
