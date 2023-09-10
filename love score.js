@@ -4,25 +4,15 @@ function button() {
 
     // Generate a random love score between 1 and 100
     let love_score = Math.floor(Math.random() * 100) + 1;
-
-    let result = name1 + " and " + name2 + "'s Love Score is: " + love_score + "%";
-
-    if (result > 80) {
-        alert ("Your love score is " + result + "%." + " You are a good match!");
+    document.getElementById("result").textContent = (name1 + " & " + name2 + " your love score is " + love_score + "%");
+    // conditions
+    if(love_score > 80) {
+        document.getElementById("popUp").textContent = ("You are a good match!");
+    } else if(love_score > 45 && love_score <= 79) {
+        document.getElementById("popUp").textContent = "You are both sweet but this is not the right time.";
+    } else if(love_score > 20 && love_score <= 44) {
+        document.getElementById("popUp").textContent = "You both have other proirities.";
+    } else {
+        document.getElementById("popUp").textContent = "I think you are good to be friends not lovers.";
     }
-    else if (result > 40 && result <= 80) {
-        alert ("Your love score is " + result + "%." + " You are both sweet but this is not the right time ");
-    }
-    else if (result <=30) {
-        alert("Your love score is " + result + "%" + "You both have other proirities")
-    }
-    else {
-        alert("Your love score is " + result + "% " + " I think you are good to be friends not lovers.") ;
-    }
-
-    // Show the pop-up message
-    let popup = document.getElementById("popup");
-    popup.style.display = "block";
-    popup.innerText = result;
-
 }
